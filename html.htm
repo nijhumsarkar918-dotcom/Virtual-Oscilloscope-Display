@@ -1,0 +1,147 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+.MsoChpDefault
+	{font-family:"Calibri","sans-serif";}
+.MsoPapDefault
+	{margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US>
+
+<div class=WordSection1>
+
+<p class=MsoNormal>&lt;div class=&quot;dashboard&quot;&gt;</p>
+
+<p class=MsoNormal>  &lt;!-- Left Control Panel --&gt;</p>
+
+<p class=MsoNormal>  &lt;div class=&quot;panel&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;h2&gt;Signal &amp; Circuit Controls&lt;/h2&gt;</p>
+
+<p class=MsoNormal>    </p>
+
+<p class=MsoNormal>    &lt;div class=&quot;control-group&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;amplitude&quot;&gt;Input Amplitude
+(Vin): &lt;span id=&quot;amp-val&quot;&gt;5&lt;/span&gt; V&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;range&quot;
+id=&quot;amplitude&quot; min=&quot;1&quot; max=&quot;10&quot;
+value=&quot;5&quot; step=&quot;0.5&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;control-group&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;frequency&quot;&gt;Signal
+Frequency (f): &lt;span id=&quot;freq-val&quot;&gt;50&lt;/span&gt;
+Hz&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;range&quot;
+id=&quot;frequency&quot; min=&quot;10&quot; max=&quot;200&quot;
+value=&quot;50&quot; step=&quot;5&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;control-group&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;resistance&quot;&gt;Resistor (R):
+&lt;span id=&quot;res-val&quot;&gt;1000&lt;/span&gt; &#937;&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;range&quot;
+id=&quot;resistance&quot; min=&quot;100&quot; max=&quot;10000&quot;
+value=&quot;1000&quot; step=&quot;100&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;control-group&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;label for=&quot;capacitance&quot;&gt;Capacitor
+(C): &lt;span id=&quot;cap-val&quot;&gt;1.0&lt;/span&gt; µF&lt;/label&gt;</p>
+
+<p class=MsoNormal>      &lt;input type=&quot;range&quot;
+id=&quot;capacitance&quot; min=&quot;0.1&quot; max=&quot;10&quot;
+value=&quot;1&quot; step=&quot;0.1&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;info-box&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;p&gt;&lt;strong&gt;Cutoff Frequency
+(fc):&lt;/strong&gt; &lt;span id=&quot;fc-val&quot;&gt;159.15&lt;/span&gt;
+Hz&lt;/p&gt;</p>
+
+<p class=MsoNormal>      &lt;p&gt;&lt;strong&gt;Gain:&lt;/strong&gt; &lt;span
+id=&quot;gain-val&quot;&gt;0.95&lt;/span&gt;&lt;/p&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>  &lt;/div&gt;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>  &lt;!-- Right Canvas Screen --&gt;</p>
+
+<p class=MsoNormal>  &lt;div class=&quot;display-area&quot;&gt;</p>
+
+<p class=MsoNormal>    &lt;h2&gt;Virtual Oscilloscope Display&lt;/h2&gt;</p>
+
+<p class=MsoNormal>    &lt;canvas id=&quot;oscilloscope&quot;
+width=&quot;600&quot; height=&quot;350&quot;&gt;&lt;/canvas&gt;</p>
+
+<p class=MsoNormal>    &lt;div class=&quot;legend&quot;&gt;</p>
+
+<p class=MsoNormal>      &lt;span class=&quot;legend-item&quot;&gt;&lt;span
+class=&quot;color-box input-color&quot;&gt;&lt;/span&gt; Input
+Signal&lt;/span&gt;</p>
+
+<p class=MsoNormal>      &lt;span class=&quot;legend-item&quot;&gt;&lt;span
+class=&quot;color-box output-color&quot;&gt;&lt;/span&gt; Filtered
+Output&lt;/span&gt;</p>
+
+<p class=MsoNormal>    &lt;/div&gt;</p>
+
+<p class=MsoNormal>  &lt;/div&gt;</p>
+
+<p class=MsoNormal>&lt;/div&gt;</p>
+
+</div>
+
+</body>
+
+</html>
